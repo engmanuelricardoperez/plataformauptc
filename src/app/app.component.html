@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div style="color: blue;">
+    <h1>{{title}}</h1>
+    <h3>{{description}}</h3>
+  </div>
+
+  <nav>
+    <a routerLink="customers" class="btn btn-primary active" role="button" routerLinkActive="active">Customers</a>
+    <a routerLink="add" class="btn btn-primary active" role="button" routerLinkActive="active">Add</a>
+    <a routerLink="dashboard" class="btn btn-primary active" role="button" routerLinkActive="active">Iot Dashboard</a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
