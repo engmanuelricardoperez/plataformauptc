@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'JavaSampleApproach';
-  description = 'Angular-Firebase Demo';
+  title = 'Plataforma Agrónica U.P.T.C.';
+  description = 'IoT - Agriculture';
 }
