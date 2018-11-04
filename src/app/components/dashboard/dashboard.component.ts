@@ -15,13 +15,13 @@ export class DashboardComponent implements OnInit {
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
-    this.getDashboardsList();
+    this.getDashboardListOne();
     console.log(this.dashboards);
   }
 
-  getDashboardsList() {
+  getDashboardListOne() {
     // Use snapshotChanges().map() to store the key
-    this.dashboardService.getDashboardList().snapshotChanges().pipe(
+    this.dashboardService.getDashboardListOne().snapshotChanges().pipe(
       map(changes =>
         changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
       )

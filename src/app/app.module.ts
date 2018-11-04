@@ -14,6 +14,7 @@ import { CustomerDetailsComponent } from '../app/components/customers/customer-d
 import { CreateCustomerComponent } from '../app/components/customers/create-customer/create-customer.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DashboardDetailsComponent } from './components/dashboard-details/dashboard-details.component';
+import { GraphComponent } from './components/graph/graph.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { DashboardDetailsComponent } from './components/dashboard-details/dashbo
     CustomerDetailsComponent,
     CreateCustomerComponent,
     DashboardComponent,
-    DashboardDetailsComponent
+    DashboardDetailsComponent,
+    GraphComponent
   ],
   imports: [
     BrowserModule,
