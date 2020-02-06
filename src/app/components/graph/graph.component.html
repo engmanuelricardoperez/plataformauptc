@@ -2,4 +2,8 @@
     <canvas #canvas></canvas>
 </div>
  
- 
+<div>
+    <h4>Older Than</h4>
+    <input type="datetime-local" [(ngModel)]="hora" (keyup.enter)="filterGreaterThan('hora', hora)">
+    <button (click)="filterGreaterThan('hora', hora)">Filtrar</button>
+</div>

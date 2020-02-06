@@ -1,11 +1,14 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: "AIzaSyD-7UiAmiprDnvJsltPvxpAb-8pbhGV3fY",
-    authDomain: "angular6crud-bb2e5.firebaseapp.com",
-    databaseURL: "https://angular6crud-bb2e5.firebaseio.com",
-    projectId: "angular6crud-bb2e5",
-    storageBucket: "angular6crud-bb2e5.appspot.com",
-    messagingSenderId: "878125974298"
+    apiKey: "AIzaSyAEiEPht8KxSNiIabGCLAOX0ziQWImmkng",
+    authDomain: "whinker.firebaseapp.com",
+    databaseURL: "https://whinker.firebaseio.com",
+    projectId: "whinker",
+    storageBucket: "whinker.appspot.com",
+    messagingSenderId: "615366367534"
   }
 };
+
+
+

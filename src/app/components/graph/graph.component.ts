@@ -4,6 +4,7 @@ import { ViewChild } from '@angular/core';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
+import * as Lodash from 'lodash';
 
 @Component({
   selector: 'app-graph',
@@ -18,6 +19,8 @@ export class GraphComponent implements OnInit {
   dataT: any = [];
   dataH: any = [];
   flag: boolean;
+  filteredGraph: any;
+  filters = {};
 
 	@ViewChild('lineCanvas') lineCanvas;
   constructor(private db: AngularFireDatabase) { }
@@ -54,6 +57,16 @@ export class GraphComponent implements OnInit {
 			this.makeChart();
 		})
 	}
+
+	filterGreaterThan(property: string, setValue: number) {
+		this.filters[property] = val => val > setValue
+		this.applyFilters()
+	  }
+
+	private applyFilters() {
+		this.filteredGraph = Lodash.filter(this.db, Lodash.conforms(this.filters));
+		console.log(this.filteredGraph);
+	  }
 
 	makeChart() {
 	this.chart = new Chart(this.canvas.nativeElement, {
